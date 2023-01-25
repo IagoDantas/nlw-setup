@@ -37,8 +37,8 @@ export function Home() {
     async function fetchData() {
         try {
             setLoading(true);
-            const { data } = await api.get('/summary');
-            setSummary(data)
+            const response = await api.get('/summary');
+            setSummary(response.data)
         } catch (error) {
             Alert.alert('Erro', 'Não foi possível carregar o sumário de hábitos')
             console.log(error)
