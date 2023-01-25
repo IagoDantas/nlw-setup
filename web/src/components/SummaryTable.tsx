@@ -36,7 +36,7 @@ export function SummaryTable() {
                     weekDays.map((weekDay, index) => {
                         return (
                             <div key={`${weekDay}-${index}`}
-                                className="text-zinc-400 text-xl h-10 w-10 font-bold flex items-center justify-center">
+                                className="text-zinc-400 text-xl h-10 w-10 font-extrabold flex items-center justify-center">
                                 {weekDay}
                             </div>
                         )
@@ -46,7 +46,7 @@ export function SummaryTable() {
             </div>
 
             <div className="grid grid-rows-7 grid-flow-col gap-3">
-                {
+                {summary.length > 0 &&
                     summaryDates.map(date => {
 
                         const dayInSummary = summary.find(day => {
@@ -58,7 +58,7 @@ export function SummaryTable() {
                                 key={date.toString()}
                                 date={date}
                                 amount={dayInSummary?.amount}
-                                completed={dayInSummary?.completed}
+                                defaultCompleted={dayInSummary?.completed}
                             />
                         )
                     })
