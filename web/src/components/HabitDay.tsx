@@ -41,18 +41,18 @@ export function HabitDay({ defaultCompleted = 0, amount = 0, date }: HabitDayPro
                             'bg-violet-800 border-violet-700': completedPercentage >= 20 && completedPercentage < 40,
                             'bg-violet-900 border-violet-800': completedPercentage > 0 && completedPercentage < 20,
                             'bg-zinc-900 border-zinc-800': completedPercentage === 0,
-                            ['border-zinc-400 border-4']: isCurrentDay,
+                            ['border-zinc-200 border-4']: isCurrentDay,
                         })}
             />
             <Popover.Portal>
-                <Popover.Content className='min-w-[320px] p-6 rounded-2xl bg-zinc-900 flex flex-col'>
+                <Popover.Content className='min-w-[320px] p-6 rounded-2xl bg-zinc-900 flex flex-col '>
                     <span className='font-semibold text-zinc-400'>{dayOfWeek}</span>
                     <span className="mt-1 font-extrabold leading-tight text-3xl">{dayAndMonth}</span>
 
                     <ProgressBar progress={completedPercentage} />
                     <HabitsList date={date} onCompletedChanged={handleCompletedChanged} />
 
-                    <Popover.Arrow height={8} width={16} className="fill-zinc-900" />
+                    <Popover.Arrow height={8} width={16} className="fill-zinc-900 " />
 
 
                 </Popover.Content>
