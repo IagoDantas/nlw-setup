@@ -1,10 +1,10 @@
 
 import { View, Text, ScrollView, Alert } from 'react-native';
 
+import { useCallback, useState } from 'react';
 import { api } from '../lib/axios'
 
-import { useNavigation } from '@react-navigation/native';
-import { useEffect, useState } from 'react';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { Loading } from '../components/Loading';
 
 import { generateRangeBetweenDates } from '../utils/generate-range-between-dates'
@@ -47,9 +47,9 @@ export function Home() {
         }
     }
 
-    useEffect(() => {
+    useFocusEffect(useCallback(() => {
         fetchData();
-    }, []);
+    }, []));
 
 
     if (loading) {

@@ -1,7 +1,7 @@
-import { useRoute, useFocusEffect } from '@react-navigation/native'
-import { useCallback, useState } from "react";
+import { useEffect, useState } from "react";
 import { api } from "../lib/axios";
 import { ScrollView, View, Text, Alert } from "react-native";
+import { useRoute } from '@react-navigation/native'
 import { BackButton } from "../components/BackButton";
 
 import dayjs from 'dayjs'
@@ -72,9 +72,9 @@ export function Habit() {
     }
 
 
-    useFocusEffect(useCallback(() => {
-        fetchHabits();
-    }, []));
+    useEffect(() => {
+        fetchHabits()
+    }, [])
 
 
     if (loading) {
