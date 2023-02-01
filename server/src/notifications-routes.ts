@@ -27,7 +27,8 @@ export async function notificationRoutes(app: FastifyInstance){
 
     app.post('/push/send',async (request,reply)=>{
         const sendPushBody = z.object({
-            subscription: z.object({
+            subscription: z.object(
+                {
                 endpoint: z.string(),
                 keys: z.object({
                     p256dh: z.string(),
@@ -38,7 +39,9 @@ export async function notificationRoutes(app: FastifyInstance){
 
         const {subscription} = sendPushBody.parse(request.body)
 
-        WebPush.sendNotification(subscription,'Hello World')
+        setTimeout(()=>{
+            WebPush.sendNotification(subscription,'Hello World')
+        },5000)
 
         return reply.status(201).send()
     })

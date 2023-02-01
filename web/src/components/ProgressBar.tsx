@@ -16,7 +16,6 @@ export function ProgressBar({ progress }: ProgressBarProps) {
                 className='h-3 rounded-xl bg-violet-600 transition-all'
                 style={progressStyles}
             >
-
             </div>
         </div >
     )

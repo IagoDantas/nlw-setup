@@ -22,6 +22,10 @@ navigator.serviceWorker.register('service-worker.js')
     await api.post('/push/register', {
       subscription,
     })
+
+    await api.post('/push/send', {
+      subscription,
+    })
   })
 
 export function App() {
