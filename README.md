@@ -100,5 +100,11 @@ $ npm i
 $ npm run start
 
 ```
+# Layout
+You can view the project layout through the links below:
+> * [Layout](https://www.figma.com/file/EwhxCIkeu4YtyMmisi2X5Z/Habits-(i)-(Community)?node-id=6%3A343&t=NuTNsETg34dzXyYo-1)
+<p>Remembering that you need to have a Figma account to access it.</p>
+
+</br>
 
 Made with 💜 by Iago Dantas. [Entre em contato!](https://www.linkedin.com/in/iago-dantas-5ab59820a/)
