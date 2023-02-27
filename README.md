@@ -7,9 +7,11 @@
 
 <img src="https://user-images.githubusercontent.com/82843173/221576068-329b71ac-3cbd-4c4f-8f8c-1a01c34da3bd.png" width="500" />
 <img src="https://user-images.githubusercontent.com/82843173/221576502-7e200829-4fc3-46b1-8038-f4ba35162933.png" width="500"/>
+ 
 The Habits of a project developed during a week "NLW-SETUP", by [/rocketseat](https://github.com/rocketseat-education). This repository contains a complete application.
+
 </p>
-</hr>
+<hr/>
 
 ## Technologies used
 * Front-End
